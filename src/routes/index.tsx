@@ -419,7 +419,7 @@ function Index() {
               className="absolute inset-0 w-full h-full object-cover opacity-70"
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background" />
+          <div className="absolute inset-0 bg-linear-to-b from-background/40 via-background/30 to-background" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,var(--background)_85%)]" />
 
           <div
@@ -440,7 +440,7 @@ function Index() {
                 {showCursor && <span className="typing-cursor" aria-hidden="true">&nbsp;</span>}
               </span>
             </h1>
-            <Separator className="mx-auto mt-8 w-40 bg-gradient-to-r from-transparent via-bronze to-transparent" />
+            <Separator className="mx-auto mt-8 w-40 bg-linear-to-r from-transparent via-bronze to-transparent" />
             <p className="mt-6 font-body italic text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               "A maester of the web, sworn to React and Node, keeper of scrolls
               in HTML, CSS, and the elder tongue of JavaScript."
@@ -528,7 +528,7 @@ function Index() {
                         loading="lazy"
                         width={1024}
                         height={1024}
-                        className="relative w-full aspect-square object-cover border border-bronze/40 grayscale-[15%] hover:grayscale-0 transition duration-700"
+                        className="relative w-full aspect-square object-cover border border-bronze/40 grayscale-15 hover:grayscale-0 transition duration-700"
                       />
                     </div>
                     <div>
@@ -593,7 +593,7 @@ function Index() {
         {/* EXPERIENCE */}
         <section
           id="experience"
-          className="relative py-32 px-6 bg-gradient-to-b from-transparent via-obsidian/40 to-transparent"
+          className="relative py-32 px-6 bg-linear-to-b from-transparent via-obsidian/40 to-transparent"
         >
           <div className="max-w-4xl mx-auto">
             <SectionHeading
@@ -605,8 +605,8 @@ function Index() {
               <ol className="mt-20 relative border-l border-bronze/40 pl-8 space-y-16">
                 {CHRONICLES.map((c) => (
                   <li key={c.title} className="relative">
-                    <span className="absolute -left-[41px] top-2 w-4 h-4 rotate-45 border border-bronze bg-background" />
-                    <span className="absolute -left-[37px] top-[10px] w-2 h-2 rotate-45 bg-fire animate-flicker" />
+                    <span className="absolute -left-10.25 top-2 w-4 h-4 rotate-45 border border-bronze bg-background" />
+                    <span className="absolute -left-9.25 top-2.5 w-2 h-2 rotate-45 bg-fire animate-flicker" />
                     <p className="font-display text-[0.7rem] tracking-[0.4em] uppercase text-bronze">
                       {c.year}
                     </p>
@@ -786,7 +786,7 @@ function PlaqueLink({
     <Button
       variant="outline"
       asChild
-      className="group relative h-auto px-8 py-4 border-bronze/60 bg-gradient-to-b from-card/80 to-obsidian/60 backdrop-blur-sm hover:border-bronze transition-all duration-300 hover:-translate-y-0.5 rounded-none"
+      className="group relative h-auto px-8 py-4 border-bronze/60 bg-linear-to-b from-card/80 to-obsidian/60 backdrop-blur-sm hover:border-bronze transition-all duration-300 hover:-translate-y-0.5 rounded-none"
     >
       <a href={href}>
         <span
@@ -824,7 +824,7 @@ function SectionHeading({
       <h2 className="mt-5 font-display font-bold text-4xl md:text-5xl text-parchment">
         {title}
       </h2>
-      <Separator className="mx-auto mt-6 w-32 bg-gradient-to-r from-transparent via-bronze to-transparent" />
+      <Separator className="mx-auto mt-6 w-32 bg-linear-to-r from-transparent via-bronze to-transparent" />
       {subtitle && (
         <p className="mt-6 italic text-muted-foreground max-w-xl mx-auto">
           {subtitle}
@@ -937,7 +937,7 @@ function ColdOpen({ onDone }: { onDone: () => void }) {
   if (phase === "gone") return null;
   return (
     <div
-      className={`fixed inset-0 z-[100] bg-obsidian overflow-hidden transition-opacity duration-700 ${
+      className={`fixed inset-0 z-100 bg-obsidian overflow-hidden transition-opacity duration-700 ${
         phase === "out" ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
       role="dialog"
@@ -990,9 +990,9 @@ function ColdOpen({ onDone }: { onDone: () => void }) {
         </div>
       </div>
       {/* Sword slash */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-parchment to-transparent animate-co-slash pointer-events-none mix-blend-screen" />
+      <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-0.75 bg-linear-to-r from-transparent via-parchment to-transparent animate-co-slash pointer-events-none mix-blend-screen" />
       <div
-        className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-[14px] bg-gradient-to-r from-transparent via-fire/60 to-transparent animate-co-slash blur-md pointer-events-none"
+        className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-3.5 bg-linear-to-r from-transparent via-fire/60 to-transparent animate-co-slash blur-md pointer-events-none"
         style={{ animationDelay: "2.42s" }}
       />
       {/* Split gates (reveal the app underneath) */}
@@ -1007,7 +1007,7 @@ function ColdOpen({ onDone }: { onDone: () => void }) {
           ✦ House Chauhan Presents ✦
         </p>
         <div
-          className="mt-6 h-px w-40 bg-gradient-to-r from-transparent via-bronze to-transparent origin-center animate-co-line"
+          className="mt-6 h-px w-40 bg-linear-to-r from-transparent via-bronze to-transparent origin-center animate-co-line"
           style={{ transform: "scaleX(0)" }}
         />
         <h1
