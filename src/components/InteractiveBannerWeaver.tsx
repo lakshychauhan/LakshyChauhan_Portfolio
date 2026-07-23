@@ -334,7 +334,7 @@ export function InteractiveBannerWeaver() {
           <div className="lg:col-span-6 space-y-6 bg-stone-900/60 p-6 md:p-8 rounded-xl border border-stone-800 backdrop-blur-md shadow-2xl">
             {/* Step 1: Choose House */}
             <div>
-              <label className="flex font-display text-xs tracking-wider uppercase text-amber-500 mb-3 items-center gap-2">
+              <label className="font-display text-xs tracking-wider uppercase text-amber-500 mb-3 flex items-center gap-2">
                 <Shield className="w-4 h-4 text-amber-400" /> Step 1: Select House Allegiance
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
@@ -377,7 +377,7 @@ export function InteractiveBannerWeaver() {
 
             {/* Step 2: Custom House Title */}
             <div>
-              <label className="flex font-display text-xs tracking-wider uppercase text-amber-500 mb-2 items-center gap-2">
+              <label className="font-display text-xs tracking-wider uppercase text-amber-500 mb-2 flex items-center gap-2">
                 <Flame className="w-4 h-4 text-amber-400" /> Step 2: Custom Title / Motto
               </label>
               <input
@@ -392,7 +392,7 @@ export function InteractiveBannerWeaver() {
 
             {/* Step 3: Choose Tech Stack */}
             <div>
-              <label className="flex font-display text-xs tracking-wider uppercase text-amber-500 mb-2.5 items-center gap-2">
+              <label className="font-display text-xs tracking-wider uppercase text-amber-500 mb-2.5 flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-amber-400" /> Step 3: Select Tech Arsenal (Max 6)
               </label>
               <div className="flex flex-wrap gap-1.5">
